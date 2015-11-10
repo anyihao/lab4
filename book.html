@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>书本详细信息</title>
+
+</head>
+<center>   
+
+<body>
+	<div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
+	<img src="http://www.sh-dts.com/upimg/image/SD.jpg" height="100%" width="100%"/> 
+	</div> 
+	<h1>图书管理系统</h1>
+	<a href="/library/search/",style="text-decoration:none">返回查找书目</a>
+	<div align="left" style="position:absolute;z-index:-1;top:80px"></div>
+    <h2 align="center">书本信息:</h2>
+	<form method="post">
+	<table border="1">
+
+        <tr><td width="100px" height="30px" align="center" bgcolor="#FFFFFF">标题</td>
+        <td width="100px" height="30px" align="center" bgcolor="#FFFFFF">ISBN</a></td>
+		<td width="100px" height="30px" align="center" bgcolor="#FFFFFF">出版社</a></td>
+		<td width="100px" height="30px" align="center" bgcolor="#FFFFFF">出版日期</a></td>
+		
+		<td width="100px" height="30px" align="center" bgcolor="#FFFFFF">价格</a></td>
+        </tr>
+	
+			<tr><td width="100px" height="30px" align="center" bgcolor="#FFFFFF">{{book.Title}}</td>
+			<td width="100px" height="30px" align="center" bgcolor="#FFFFFF">{{book.ISBN}}</a></td>
+			<td width="100px" height="30px" align="center" bgcolor="#FFFFFF">{{book.Publisher}}</a></td>
+			<td width="100px" height="30px" align="center" bgcolor="#FFFFFF">{{book.PublishDate}}</a></td>
+			<td width="100px" height="30px" align="center" bgcolor="#FFFFFF">{{book.Price}}</a></td>
+			</tr>
+
+	</table>
+	 <h2 align="center">作者信息:</h2>
+	<table border="1">
+		
+	    <tr><td width="100px" height="30px" align="center" bgcolor="#FFFFFF">作者(ID)</td>
+        <td width="100px" height="30px" align="center" bgcolor="#FFFFFF">姓名</a></td>
+		<td width="100px" height="30px" align="center" bgcolor="#FFFFFF">年龄</a></td>
+		<td width="100px" height="30px" align="center" bgcolor="#FFFFFF">国籍</a></td>
+		</tr>
+	
+		<tr><td width="100px" height="30px" align="center" bgcolor="#FFFFFF">{{author.AuthorID}}</td>
+        <td width="100px" height="30px" align="center" bgcolor="#FFFFFF">{{author.Name}}</a></td>
+		<td width="100px" height="30px" align="center" bgcolor="#FFFFFF">{{author.Age}}</a></td>
+		<td width="100px" height="30px" align="center" bgcolor="#FFFFFF">{{author.Country}}</a></td>
+		</tr>
+
+	</table>
+	</form>
+</body>
+</center>
+</html>
