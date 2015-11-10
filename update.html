@@ -1,0 +1,78 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>更新</title>
+</head>
+<center>
+<body>
+    <div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
+	<img src="http://i3.s1.dpfile.com/2010-06-02/4425248_b.jpg%28700x700%29/thumb.jpg" height="100%" width="100%"/> 
+	</div> 
+
+    <h1>图书管理系统</h1>
+	<a href="/library/search/",style="text-decoration:none">返回查找书目</a>
+	
+    <p style="color: blue;">请输入新的图书信息</p>
+	<form method="post" action="/library/supdate/?id={{book.ISBN}}" onsubmit="保存成功！">
+	<table border="1">
+		<tr>
+		<td width="100px" height="10px" align="center" bgcolor="#FFFFFF">信息</a></td>
+		<td width="100px" height="10px" align="center" bgcolor="#FFFFFF">旧的信息</a></td>
+		<td width="200px" height="10px" align="center" bgcolor="#FFFFFF">新的信息</a></td>
+		</tr>
+	    <tr>
+		<td width="100px" height="10px" align="center" bgcolor="#FFFFFF">ISBN</a></td>
+		<td width="200px" height="20px" align="center" bgcolor="#FFFFFF">{{book.ISBN}}</a></td>
+		<td><input name="new_ISBN" type="text" style="height:20px;width:200px; background-color:#FFFFFF" align="middle"/></td>
+		</tr>
+		<tr>
+		<td width="100px" height="10px" align="center" bgcolor="#FFFFFF">标题 </a></td>
+		<td width="200px" height="20px" align="center" bgcolor="#FFFFFF">{{book.Title}}</a></td>
+		<td><input name="new_Title" type="text" style="height:20px;width:200px; background-color:#FFFFFF;" /></td>
+		</tr>
+		<tr>
+		<td width="100px" height="10px" align="center" bgcolor="#FFFFFF">出版社</a></td>
+		<td width="200px" height="20px" align="center" bgcolor="#FFFFFF">{{book.Publisher}}</a></td>
+		<td><input name="new_Publisher" type="text" style="height:20px;width:200px; background-color:#FFFFFF"/></td>
+		</tr>
+		<tr>
+		<td width="100px" height="10px" align="center" bgcolor="#FFFFFF">出版日期</a></td>
+		<td width="200px" height="30px" align="center" bgcolor="#FFFFFF">{{book.PublishDate}}</a></td>
+		<td><input name="new_date" type="date" style="height:20px;width:200px; background-color:#FFFFFF"/></td>
+		</tr>
+		<tr>
+		<td width="100px" height="10px" align="center" bgcolor="#FFFFFF">价格</a></td>
+		<td width="200px" height="20px" align="center" bgcolor="#FFFFFF">{{book.Price}}</a></td>
+		<td><input name="new_Price" type="number" style="height:20px;width:200px; background-color:#FFFFFF"/></td>
+		</tr>
+		<tr>
+		<td width="100px" height="10px" align="center" bgcolor="#FFFFFF">作者Id</a></td>
+		<td width="200px" height="20px" align="center" bgcolor="#FFFFFF">{{author.AuthorID}}</a></td>
+		<td><input name="new_ID" type="text" style="height:20px;width:200px; background-color:#FFFFFF"/></td>
+		</tr>
+		<tr>
+		<td width="100px" height="10px" align="center" bgcolor="#FFFFFF">作者姓名</a></td>
+		<td width="200px" height="20px" align="center" bgcolor="#FFFFFF">{{author.Name}}</a></td>
+		<td><input name="new_Name" type="text" style="height:20px;width:200px; background-color:#FFFFFF"/></td>
+		</tr>
+		<tr>
+		<td width="100px" height="10px" align="center" bgcolor="#FFFFFF">年龄</a></td>
+		<td width="200px" height="20px" align="center" bgcolor="#FFFFFF">{{author.Age}}</a></td>
+		<td><input name="new_Age" type="number" style="height:20px;width:200px; background-color:#FFFFFF"/></td>
+		</tr>
+		<tr>
+		<td width="100px" height="10px" align="center" bgcolor="#FFFFFF">国籍</a></td>
+		<td width="200px" height="20px" align="center" bgcolor="#FFFFFF">{{author.Country}}</a></td>
+		<td><input name="new_Country" type="text" style="height:20px;width:200px; background-color:#FFFFFF"/></td>
+		</tr>
+	</table>
+	    <div align="center">
+        <input name="提交" type="submit" style="height:40px;width:100px" value="保存"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="清空" style="height:40px;width:100px"/>
+        </div>
+	</form>
+
+</body>
+
+</center>
+</html>
