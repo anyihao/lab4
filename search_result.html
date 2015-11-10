@@ -1,0 +1,35 @@
+
+
+<html>
+<head>
+    <title>搜索结果</title>
+</head>
+<body>
+<div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
+<img src="http://img22.mtime.cn/up/2010/08/11/220342.20456547_o.jpg" height="100%" width="100%"/> 
+</div> 
+<center>
+	<h1>图书管理系统</h1>
+	<a href="/library/search/",style="text-decoration:none">返回查找书目</a>
+    <p style="color: green;">You searched for: <strong>{{ query }}</strong></p>
+{% if books %}
+    <p>找到 {{ books|length }} book{{ books|pluralize }}.</p>
+    
+	<table border="1">
+        {% for book in books %}
+
+        <tr><td width="200px" height="30px" align="center"  bgcolor="#FFFFFF">{{book.Title}}</td>
+        <td width="100px" height="30px" align="center" bgcolor="#FFFFFF"><a href="/library/detail/?id={{book.ISBN}}">详细信息</a></td>
+		<td width="100px" height="30px" align="center" bgcolor="#FFFFFF"><a href="/library/delete/?id={{book.ISBN}}">删除</a></td>
+		<td width="100px" height="30px" align="center" bgcolor="#FFFFFF"><a href="/library/update/?id={{book.ISBN}}">更新</a></td>
+        </tr>
+        {% endfor %}
+	</table>
+
+	
+{% else %}
+    <pstyle="color: red;">没有书籍符合你的搜索！</p>
+{% endif %}
+</center>
+</body>
+</html>
